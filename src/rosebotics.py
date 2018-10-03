@@ -40,11 +40,10 @@ class Snatch3rRobot(object):
     def move_forward(self, n, x):
         if x < 0:
             x = x * -1
-        t = 0
-        while t < n:
+        endtime = time.time() + n
+        while time.time() < endtime:
             self.go(x, x)
-            t = time.time()
-        self.stop()
+            self.stop()
 
     def turn(self, num_sec, x):
         end_time = time.time()+num_sec
