@@ -17,8 +17,8 @@ class StopAction(Enum):
 
 class Snatch3rRobot(object):
     def __init__(self,
-                 left_wheel_port = ev3.OUTPUT_B,
-                 right_wheel_port = ev3.OUTPUT_C):
+                 left_wheel_port=ev3.OUTPUT_B,
+                 right_wheel_port=ev3.OUTPUT_C):
         self.left_wheel = Wheel(left_wheel_port)
         self.right_wheel = Wheel(right_wheel_port)
 
@@ -36,6 +36,14 @@ class Snatch3rRobot(object):
             self.left_wheel.start_spinning(x)
             self.right_wheel.start_spinning(-x)
         self.stop()
+
+    def move_forward(self, n, x):
+        if x < 0:
+            x = x * -1
+        t = 0
+        while t < n:
+            self.go(x, x)
+            t = time.time()
 
 
 class Wheel(object):

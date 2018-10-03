@@ -15,6 +15,13 @@ def main():
 def run_tests():
     """ Runs various tests. """
     run_test_go_stop()
+    run_test_spin_for_n_seconds()
+
+
+def run_test_spin_for_n_seconds():
+    robot = rb.Snatch3rRobot()
+
+    robot.spin(5)
 
 
 def run_test_go_stop():
