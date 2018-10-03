@@ -44,6 +44,7 @@ class Snatch3rRobot(object):
         while t < n:
             self.go(x, x)
             t = time.time()
+        self.stop()
 
     def turn(self, x):
         end_time = time.time()+5

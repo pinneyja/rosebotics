@@ -23,7 +23,6 @@ def run_test_spin_for_n_seconds():
 
     robot.spin(4, -15)
     time.sleep(2)
-    robot.stop()
 
     print(robot.right_wheel.get_degrees_spun())
     print(robot.left_wheel.get_degrees_spun())
@@ -34,7 +33,6 @@ def run_test_spin_for_n_seconds():
 
     robot.spin(10, 20)
     time.sleep(2)
-    robot.stop()
 
     print(robot.right_wheel.get_degrees_spun())
     print(robot.left_wheel.get_degrees_spun())
