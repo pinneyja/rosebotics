@@ -30,7 +30,12 @@ class Snatch3rRobot(object):
         self.left_wheel.stop_spinning(stop_action)
         self.right_wheel.stop_spinning(stop_action)
 
-    def spin(self):
+    def spin(self, seconds_to_spin, x):
+        start_time = time.time()
+        while start_time + seconds_to_spin > time.time():
+            self.left_wheel.start_spinning(x)
+            self.right_wheel.start_spinning(-x)
+        self.stop()
 
 
 class Wheel(object):
