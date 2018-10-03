@@ -38,5 +38,16 @@ def run_test_go_stop():
     print(robot.right_wheel.get_degrees_spun())
     print(robot.left_wheel.get_degrees_spun())
 
+def run_move_forward():
+    robot = rb.Snatch3rRobot()
+    
+    robot.move_forward(6, 50)
+    robot.stop()
+    robot.move_forward(8, 75)
+    robot.stop()
+    robot.move_forward(20, 100)
+
+
+
 
 main()
