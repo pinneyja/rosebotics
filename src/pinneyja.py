@@ -43,9 +43,7 @@ def run_test_go_stop():
 def run_test_turn():
     robot = rb.Snatch3rRobot()
     robot.turn(1, 100)
-    robot.stop()
     robot.turn(3, -100)
-    robot.stop()
     robot.turn(5, 100)
 
 
