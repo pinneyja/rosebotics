@@ -21,7 +21,7 @@ def run_tests():
 def run_test_spin_for_n_seconds():
     robot = rb.Snatch3rRobot()
 
-    robot.spin(5, -15)
+    robot.spin(4, -15)
     time.sleep(2)
     robot.stop()
 
