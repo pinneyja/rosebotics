@@ -21,7 +21,23 @@ def run_tests():
 def run_test_spin_for_n_seconds():
     robot = rb.Snatch3rRobot()
 
-    robot.spin(5)
+    robot.spin(5, -15)
+    time.sleep(2)
+    robot.stop()
+
+    print(robot.right_wheel.get_degrees_spun())
+    print(robot.left_wheel.get_degrees_spun())
+    robot.left_wheel.reset_degrees_spun(0)
+    robot.right_wheel.reset_degrees_spun(0)
+
+    time.sleep(2)
+
+    robot.spin(10, 20)
+    time.sleep(2)
+    robot.stop()
+
+    print(robot.right_wheel.get_degrees_spun())
+    print(robot.left_wheel.get_degrees_spun())
 
 
 def run_test_go_stop():
