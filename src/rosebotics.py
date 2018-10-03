@@ -46,10 +46,10 @@ class Snatch3rRobot(object):
             t = time.time()
         self.stop()
 
-    def turn(self, x):
-        end_time = time.time()+5
+    def turn(self, num_sec, x):
+        end_time = time.time()+num_sec
 
-        while time.time()<=end_time:
+        while time.time() <= end_time:
             self.right_wheel.start_spinning(x)
 
         self.stop()
